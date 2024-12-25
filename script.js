@@ -15,7 +15,6 @@ chordBtn.addEventListener('click', printChord)
 function chordConstructor(letter, accidental, quality, bassNote) {
   chord = letter + accidental + quality + bassNote
   return chord
-  console.log(chord)
 }
 
 function generateChords(params, constructor) {
@@ -31,7 +30,6 @@ function generateChords(params, constructor) {
       for (k in qualities) {
         for (l in bassNotes) {
           chord = constructor(letters[i], accidentals[j], qualities[k], bassNotes[l])
-          constructor(letters[i], accidentals[j], qualities[k], bassNotes[l])
           array.push(chord)
         }
       }

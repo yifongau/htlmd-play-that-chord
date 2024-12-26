@@ -28,7 +28,11 @@ function random(array) {
 
 
 function chordConstructor(letter, accidental, quality, bassNote) {
-  chord = letter + accidental + quality + bassNote
+  if (bassNote) {
+  chord = letter + accidental + quality + "/" + bassNote
+  } else {
+  chord = letter + accidental + quality
+    }
   return chord
 }
 

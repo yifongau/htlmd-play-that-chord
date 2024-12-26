@@ -1,21 +1,20 @@
-// variables
 const chordEl = document.getElementById('chord')
 const chordBtn = document.getElementById('chordBtn')
 
-const chordParams = new Object(); // possible chord parameters
+const chordParams = new Object();
 chordParams.letters = ['C', 'D', 'E', 'F', 'G', 'A', 'B']
 chordParams.accidentals = ['', '♭', '♯']
 chordParams.qualities = ['Δ7', '7', 'm7', 'ø']
 chordParams.bassNotes = ['', 'III', 'V', 'VII']
 chordParams.exclusions = { rareEnharmonics: ['B♯', 'E♯', 'C♭', 'F♭'] }
 
-// initialize app
+
 let chordCache = generateChords(chordParams, chordConstructor, chordFilter)
 const printChord = function () { chordElOutput(random(chordCache)) }
 printChord()
 chordBtn.addEventListener('click', printChord)
 
-// functions
+
 function chordElOutput(string) {
   chordEl.innerHTML = string
 }

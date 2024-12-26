@@ -9,15 +9,6 @@ chordParams.qualities = ['Δ7', '7', 'm7', 'ø']
 chordParams.bassNotes = ['', 'III', 'V', 'VII']
 chordParams.exclusions = { rareEnharmonics: ['B♯', 'E♯', 'C♭', 'F♭'] }
 
-let C = 0
-let D = 0
-let E = 0
-let F = 0
-let G = 0
-let A = 0
-let B = 0
-
-
 // initialize app
 let chordCache = generateChords(chordParams, chordConstructor, chordFilter)
 const printChord = function () { chordElOutput(random(chordCache)) }

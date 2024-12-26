@@ -1,20 +1,23 @@
+// globals
 const chordEl = document.getElementById('chord')
 const chordBtn = document.getElementById('chordBtn')
 
 const chordParams = new Object();
 chordParams.letters = ['C', 'D', 'E', 'F', 'G', 'A', 'B']
 chordParams.accidentals = ['', '♭', '♯']
-chordParams.qualities = ['Δ7', '7', 'm7', 'ø']
+chordParams.qualities = ['Δ7', '7', 'm7', 'ø7']
 chordParams.bassNotes = ['', 'III', 'V', 'VII']
 chordParams.exclusions = { rareEnharmonics: ['B♯', 'E♯', 'C♭', 'F♭'] }
 
+console.log(chordParams)
 
-let chordCache = generateChords(chordParams, chordConstructor, chordFilter)
+// program execution
 const printChord = function () { chordElOutput(random(chordCache)) }
+let chordCache = generateChords(chordParams, chordConstructor, chordFilter)
 printChord()
 chordBtn.addEventListener('click', printChord)
 
-
+// function definitions
 function chordElOutput(string) {
   chordEl.innerHTML = string
 }

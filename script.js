@@ -5,7 +5,7 @@ const chordBtn = document.getElementById('chordBtn')
 const chordParams = new Object();
 chordParams.letters = ['C', 'D', 'E', 'F', 'G', 'A', 'B']
 chordParams.accidentals = ['', '♭', '♯']
-chordParams.qualities = ['Δ7', '7', 'm7', 'ø7']
+chordParams.qualities = ['Δ7', '7', 'm7', 'ø7', 'o7']
 chordParams.bassNotes = ['', 'III', 'V', 'VII']
 chordParams.exclusions = { rareEnharmonics: ['B♯', 'E♯', 'C♭', 'F♭'] }
 
@@ -33,7 +33,7 @@ function chordConstructor(letter, accidental, quality, bassNote) {
   if (bassNote) {
   chord = letter + accidental + quality + "/" + bassNote
   } else {
-  chord = letter + accidental + quality
+  chord = letter + accidental + quality 
     }
   return chord
 }
